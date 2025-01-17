@@ -1,6 +1,6 @@
 
 from torch.utils.data import Dataset, DataLoader
-from utils_single import parse_arguments, get_config
+from utils import parse_arguments, get_config
 import subprocess
 
 command_line_args = parse_arguments()
@@ -37,7 +37,7 @@ for batch_idx in range(batch_size):
     print('start idx : ', start_idx)
     print('end idx : ', end_idx)
     
-    process = subprocess.Popen(['python', '-c', f"from utils_single import process_variations; process_variations({variations_dict}, {class_index}, {start_idx}, {end_idx})"])
+    process = subprocess.Popen(['python', '-c', f"from utils import process_variations; process_variations({variations_dict}, {class_index}, {start_idx}, {end_idx})"])
     processes.append(process)
 
 for process in processes:
