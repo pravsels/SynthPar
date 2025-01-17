@@ -53,9 +53,9 @@ except Exception as e:
 # Filter for shard files
 shard_files = [f for f in repo_files if f.startswith("shard_") and f.endswith(".zip")]
 
-st_type = input("Enter ST type (e.g. ST1, ST2): ")
+st_type = input("Enter ST type (e.g. ST1, ST2 ... ST8): ")
 if not st_type.startswith("ST") or not st_type[2:].isdigit() or not 1 <= int(st_type[2:]) <= 8:
-    print("Invalid input. Please enter ST1 through ST8")
+    print("Invalid input. Please choose from ST1 through ST8")
     exit() 
 
 filter_st = lambda files, st: list(filter(lambda x: st in x, files))

@@ -19,13 +19,23 @@ from datasets import load_dataset
 dataset = load_dataset("pravsels/synthpar2")
 ```
 
-To load the images in a folder of your choosing and have control over the number of sharded zip files to download, use the `hf_dataset_dload.py` script. 
+To download a subset of the dataset, use the `hf_dataset_dload.py` script. Note that this is easier if you set up the conda environment (instructions in the next section). 
 
-
-## Generating images
-
-Setup anaconda environment:
 ```
+python hf_dataset_dload.py
+
+Enter ST type (e.g. ST1, ST2 ... ST8):
+```
+
+And select from subsets ST1 through ST8, which are subsets with specific skin tone regions and sex. 
+
+
+## Setup conda environment
+
+Change permissions for `install_conda_env.sh` and execute it:
+```
+chmod u+x ./install_conda_env.sh
+
 ./install_conda_env.sh
 ```
 
@@ -33,6 +43,9 @@ Activate the environment:
 ```
 conda activate synthpar2
 ```
+
+
+## Generating images 
 
 Run the generation script with the desired configuration:
 ```
