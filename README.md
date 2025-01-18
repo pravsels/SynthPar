@@ -19,18 +19,7 @@ from datasets import load_dataset
 dataset = load_dataset("pravsels/synthpar2")
 ```
 
-To download a subset of the dataset, use the `hf_dataset_dload.py` script. Note that this is easier if you set up the conda environment (instructions in the next section). 
-
-```
-python hf_dataset_dload.py
-
-Enter ST type (e.g. ST1, ST2 ... ST8):
-```
-
-And select from subsets ST1 through ST8, which are subsets with specific skin tone regions and sex. 
-
-
-## Setup conda environment
+To download a subset of the dataset, use the `hf_dataset_dload.py` script. But first, you need to setup a conda environment. 
 
 Change permissions for `install_conda_env.sh` and execute it:
 ```
@@ -44,10 +33,21 @@ Activate the environment:
 conda activate synthpar2
 ```
 
+Run the download script and select from subsets ST1 through ST8, which are subsets with specific skin tone regions and sex. 
+```
+python hf_dataset_dload.py
+
+Enter ST type (e.g. ST1, ST2 ... ST8):
+```
+
 
 ## Generating images 
 
-Run the generation script with the desired configuration:
+To generate images, you need to setup a docker container. 
+
+To build and run the docker container, use `docker_build.sh` and `run_docker_container.sh` scripts respectively.
+
+Once the container is running, the generation script can be run with the desired configuration:
 ```
 python generation_script.py -c configs/ST2.yaml
 ```
