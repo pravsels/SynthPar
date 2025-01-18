@@ -2,6 +2,22 @@
 from torch.utils.data import Dataset, DataLoader
 from utils import parse_arguments, get_config
 import subprocess
+import os 
+from huggingface_hub import hf_hub_download
+
+# Download necessary models 
+models = [
+    './checkpoints/facenet_vggface2.pt',
+    './checkpoints/shape_predictor_68_face_landmarks.dat',
+    './checkpoints/network_conditional_skin_tones.pkl'
+]
+
+for model in models: 
+    hf_hub_download(repo_id="pravsels/synthpar2", 
+                    filename=model.split('/')[-1], 
+                    repo_type="model", 
+                    local_dir=os.path.dirname(model))
+
 
 command_line_args = parse_arguments()
 config = get_config(command_line_args.config)

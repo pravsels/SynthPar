@@ -318,7 +318,6 @@ def load_weights(mdl, name):
         raise ValueError('Pretrained models only exist for "vggface2" and "casia-webface"')
 
     model_dir = os.path.join('./', 'checkpoints')
-    os.makedirs(model_dir, exist_ok=True)
 
     cached_file = os.path.join(model_dir, os.path.basename(path))
 
