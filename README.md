@@ -1,4 +1,4 @@
-# SynthPar2: Synthetic Faces for Demographic Parity
+# SynthPar2: Synthetic Faces for Demographic Parity in Face Recognition Performance 
 
 SynthPar2 aims to facilitate the development and evaluation of face recognition models, with the goal of closing the gap in performance across all demographic groups.
 
