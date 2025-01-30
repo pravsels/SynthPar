@@ -1,0 +1,3 @@
+race_folder: 'ST6'
+dataset_folder: '../generated_images/'
+batch_size: 3072

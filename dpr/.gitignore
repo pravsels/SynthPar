@@ -1,0 +1,7 @@
+*.pyc
+log_test/
+result_1024
+
+generated_* 
+
+slurm-*.out
