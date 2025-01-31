@@ -13,7 +13,7 @@ models = [
 ]
 
 for model in models: 
-    hf_hub_download(repo_id="pravsels/synthpar2", 
+    hf_hub_download(repo_id="pravsels/synthpar", 
                     filename=model.split('/')[-1], 
                     repo_type="model", 
                     local_dir=os.path.dirname(model))
