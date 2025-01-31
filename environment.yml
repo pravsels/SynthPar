@@ -1,4 +1,4 @@
-name: synthpar2
+name: synthpar
 channels:
   - conda-forge
   - defaults
