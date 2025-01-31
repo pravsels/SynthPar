@@ -1,1 +1,1 @@
-docker build . -t synthpar2:latest
+docker build . -t synthpar:latest
