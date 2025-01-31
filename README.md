@@ -1,12 +1,12 @@
-# SynthPar2: Synthetic Faces for Demographic Parity in Face Recognition Performance 
+# SynthPar: Synthetic Faces for Demographic Parity in Face Recognition Performance 
 
 SynthPar2 aims to facilitate the development and evaluation of face recognition models, with the goal of closing the gap in performance across all demographic groups.
 
 It provides 2 key resources:
 
-- A conditional StyleGAN2 [generator](https://huggingface.co/pravsels/synthpar2) that allows users to create synthetic face images for specified attributes like skin color and sex.
+- A conditional StyleGAN2 [generator](https://huggingface.co/pravsels/synthpar) that allows users to create synthetic face images for specified attributes like skin color and sex.
     
-- A [dataset](https://huggingface.co/datasets/pravsels/synthpar2) of ~8.9M synthetic face images with diverse skin colors and 2 sexes (Male, Female), built with [VGGFace2](https://github.com/ox-vgg/vgg_face2) dataset and labels.
+- A [dataset](https://huggingface.co/datasets/pravsels/synthpar) of ~8.9M synthetic face images with diverse skin colors and 2 sexes (Male, Female), built with [VGGFace2](https://github.com/ox-vgg/vgg_face2) dataset and labels.
 
 
 ## Loading the dataset
@@ -57,5 +57,5 @@ Please find the configs for the other demographics in the `configs` folder.
 
 ## Licence 
 
-The code, [dataset](https://huggingface.co/datasets/pravsels/synthpar2) and [model](https://huggingface.co/pravsels/synthpar2) are released under the MIT license. 
+The code, [dataset](https://huggingface.co/datasets/pravsels/synthpar) and [model](https://huggingface.co/pravsels/synthpar) are released under the MIT license. 
 
