@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONDA_ENV=synthpar2
+CONDA_ENV=synthpar
 
 conda env create -f environment.yml
 
