@@ -1,6 +1,6 @@
 # SynthPar: Synthetic Faces for Demographic Parity in Face Recognition Performance 
 
-SynthPar2 aims to facilitate the development and evaluation of face recognition models, with the goal of closing the gap in performance across all demographic groups.
+SynthPar aims to facilitate the development and evaluation of face recognition models, with the goal of closing the gap in performance across all demographic groups.
 
 It provides 2 key resources:
 
@@ -16,7 +16,7 @@ The dataset can be loaded from the HuggingFace repository:
 ```
 from datasets import load_dataset
 
-dataset = load_dataset("pravsels/synthpar2")
+dataset = load_dataset("pravsels/synthpar")
 ```
 
 To download a subset of the dataset, use the `hf_dataset_dload.py` script. But first, you need to setup a conda environment. 
@@ -30,7 +30,7 @@ chmod u+x ./install_conda_env.sh
 
 Activate the environment:
 ```
-conda activate synthpar2
+conda activate synthpar
 ```
 
 Run the download script and select from subsets ST1 through ST8, which are subsets with specific skin tone regions and sex. 
