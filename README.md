@@ -51,9 +51,14 @@ Once the container is running, the generation script can be run with the desired
 ```
 python generation_script.py -c configs/ST2.yaml
 ```
+This generates faces and several variations in pose and expression per face. 
 
-Please find the configs for the other demographics in the `configs` folder. 
 
+To generate variations in lighting on top of these, please run: 
+```
+python network_demo_512.py -c configs/ST2.yaml
+```
+By default, it generates 7 lighting variations per image. 
 
 ## Licence 
 
