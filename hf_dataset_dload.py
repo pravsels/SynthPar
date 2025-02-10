@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from tqdm import tqdm
 import requests
 
-dataset_name = "synthpar2"
+dataset_name = "synthpar"
 hf_repo_id = f"pravsels/{dataset_name}"
 dataset_path = "./"
 dataset_dir = os.path.join(dataset_path, dataset_name)
