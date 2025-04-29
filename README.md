@@ -9,6 +9,8 @@ It provides 2 key resources:
 - A [dataset](https://huggingface.co/datasets/pravsels/synthpar) of ~8.9M synthetic face images with diverse skin colors and 2 sexes (Male, Female), built with [VGGFace2](https://github.com/ox-vgg/vgg_face2) dataset and labels.
 
 
+**Note:** the dataset hasn't been cleaned yet. Please make sure to check for the existence of a face and if necessary, the closeness of the generated variations to the original. 
+
 ## Loading the dataset
 
 The dataset can be loaded from the HuggingFace repository:
