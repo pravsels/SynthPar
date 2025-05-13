@@ -86,8 +86,8 @@ class DragGAN:
                 else:
                     raise NameError('Cannot infer model type from pkl name!')
 
-                print(data[key].init_args)
-                print(data[key].init_kwargs)
+                # print(data[key].init_args)
+                # print(data[key].init_kwargs)
                 if 'stylegan_human' in pkl:
                     net = Generator(*data[key].init_args, **data[key].init_kwargs, square=False, padding=True)
                 else:
