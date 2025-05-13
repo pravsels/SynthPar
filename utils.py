@@ -184,14 +184,16 @@ def process_variations(variations_dict,
                        start_index=None, 
                        end_index=None,
                        output_dir=None,
-                       batch_identities=None):
+                       batch_identities=None, 
+                       generator=None):
 
-    dragan_gen = DragGANGenerator(model_path='./checkpoints/network_conditional_skin_tones.pkl', 
-                                  z_seed=None,
-                                  iterations=200, 
-                                  lr=0.001, early_stop_patience=10,
-                                  output_dir='generated_images'if output_dir == None else output_dir)
-
+    dragan_gen = generator or DragGANGenerator(
+        model_path='./checkpoints/network_conditional_skin_tones.pkl',
+        z_seed=None,
+        iterations=200,
+        lr=0.001, early_stop_patience=10,
+        output_dir='generated_images' if output_dir is None else output_dir
+    )
 
     if batch_identities is not None:
         # Use the provided list of identities

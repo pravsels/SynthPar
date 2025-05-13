@@ -2,6 +2,7 @@ import os
 import shutil
 import glob
 import argparse
+from DragGanGenerator import DragGANGenerator
 from utils import process_variations
 from mesh_utils import process_image  # make sure this module defines your process_image() as above
 
@@ -64,6 +65,13 @@ def main():
     accepted = 0
     next_id = args.start_id
 
+    G = DragGANGenerator(
+            model_path='./checkpoints/network_conditional_skin_tones.pkl',
+            z_seed=None,
+            iterations=200,
+            lr=0.001, early_stop_patience=10,
+            output_dir=args.root)             # or output_base
+
     while accepted < args.count:
 
         pattern = os.path.join(output_base, f"cond{args.class_index}_seed{next_id}")
@@ -76,7 +84,8 @@ def main():
             args.class_index,
             next_id,
             next_id + 1,
-            output_dir=args.root
+            output_dir=args.root,
+            generator=G,
         )
         # Check for new seed output
         seeds = glob.glob(pattern)
