@@ -20,3 +20,4 @@ scikit-image
 torchviz
 moviepy==1.0.3
 onnxruntime-gpu==1.17.1
+mediapipe 
